@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fondamenti_informatica</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+{% load static %}
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Game of Matches</h1>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="text-center panel-title">Pick a number of matches from 1 to 3</h3></div>
+            <div class="panel-body" id="game-table"><span class="label label-default">begins: </span>
+                <select id="start_player">
+                    <option value="1" selected="">Human player</option>
+                    <option value="2">Supid AI</option>
+                </select>
+                <div class="input-group input-group-sm" style="max-width:150px;">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="button" id="btn-minus"><i class="glyphicon glyphicon-minus"></i></button>
+                    </div>
+                    <input class="form-control" type="text" autocomplete="off" id="nMatches" style="text-align:center;">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="button" id="btn-plus"><i class="glyphicon glyphicon-plus"></i></button>
+                    </div>
+                </div>
+                <footer>
+                    <button class="btn btn-default" type="button" id="reset">Reset </button>
+                    <button class="btn btn-default" type="button" id="ok">OK </button>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <div>
+    <script type="text/javascript">
+    var static_img = "{% static 'matches/match.png' %}";
+</script>
+<script src="{% static 'matches/matches.js' %}"></script>
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
