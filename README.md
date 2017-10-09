@@ -1,2 +1,2 @@
 # fondamenti_informatica
-This repo wil containe all the exercises of the course
+This repo wil contain all the exercises of the course
